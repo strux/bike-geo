@@ -10,7 +10,7 @@
             <v-list>
                 <v-list-tile
                     v-for="bike in bikes"
-                    :key="bike.name"
+                    :key="bike.model"
                     >
                     <v-list-tile-content>
                         <v-list-tile-title><span style="caption">{{bike.make}}</span> {{bike.model}}</v-list-tile-title>
@@ -22,7 +22,7 @@
             </v-list>
         </v-navigation-drawer>
         <v-content>
-            <geo-vizualizer></geo-vizualizer>
+            <geo-vizualizer v-bind:bikes="bikes"></geo-vizualizer>
         </v-content>
     </v-app>
 </template>
@@ -33,13 +33,18 @@ import GeoVizualizer from './components/GeoVizualizer'
 export default {
     name: 'App',
     components: {
-        GeoVizualizer
+        GeoVizualizer,
     },
     data () {
         return {
             bikes: [
-                { make: 'Evil', model: 'The Following', enabled: true },
-                { make: 'Evil', model: 'The Offering', enabled: false },
+                {
+                    make: 'Evil',
+                    model: 'The Following',
+                    enabled: true,
+                    wheelSize: 622,
+                },
+                //{ make: 'Evil', model: 'The Offering', enabled: false },
             ]
         }
     }
