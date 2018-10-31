@@ -1,10 +1,10 @@
 <template>
-    <circle :r="radius" cx="25" cy="25" fill="#f00" />
+    <circle :r="radius" :cx="x" :cy="y" />
 </template>
 
 <script>
   export default {
-    props: ['size'],
+    props: ['size', 'x', 'y'],
     data: () => ({
     }),
     computed: {

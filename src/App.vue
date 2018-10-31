@@ -39,12 +39,19 @@ export default {
         return {
             bikes: [
                 {
+                    color: 'red',
                     make: 'Evil',
                     model: 'The Following',
                     enabled: true,
                     wheelSize: 622,
                 },
-                //{ make: 'Evil', model: 'The Offering', enabled: false },
+                {
+                    color: 'blue',
+                    make: 'Evil',
+                    model: 'The Calling',
+                    enabled: true,
+                    wheelSize: 584,
+                },
             ]
         }
     }
