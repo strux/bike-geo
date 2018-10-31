@@ -21,13 +21,18 @@
         this.containerHeight = window.innerHeight + 'px';
     },
     computed: {
+
         viewBoxWidth: function() {
-            // TODO: temporarily using wheel size for total size
-            return this.bikes.reduce((a, b) => a.wheelSize > b.wheelSize ? a.wheelSize : b.wheelSize)
+            return this.bikes.reduce(function (a, b) {
+                 const totalLength = (b.wheelSize + b.wheelBase)
+                 return a > totalLength ? a: totalLength
+            }, 0)
         },
         viewBoxHeight: function() {
-            // TODO: temporarily using wheel size for total size
-            return this.bikes.reduce((a, b) => a.wheelSize > b.wheelSize ? a.wheelSize : b.wheelSize)
+            return this.bikes.reduce(function (a, b) {
+                 const totalHeight = ((b.wheelSize / 2) + b.stack)
+                 return a > totalHeight ? a: totalHeight
+            }, 0)
         },
         viewBoxDef: function() {
             return `0 0 ${this.viewBoxWidth} ${this.viewBoxHeight}`

@@ -16,7 +16,7 @@
                         <v-list-tile-title><span style="caption">{{bike.make}}</span> {{bike.model}}</v-list-tile-title>
                     </v-list-tile-content>
                     <v-list-tile-action>
-                        <v-switch color="red" v-model="bike.enabled"></v-switch>
+                        <v-switch :color="bike.color" v-model="bike.enabled"></v-switch>
                     </v-list-tile-action>
                 </v-list-tile>
             </v-list>
@@ -44,6 +44,8 @@ export default {
                     model: 'The Following',
                     enabled: true,
                     wheelSize: 622,
+                    wheelBase: 1139,
+                    stack: 608,
                 },
                 {
                     color: 'blue',
@@ -51,6 +53,8 @@ export default {
                     model: 'The Calling',
                     enabled: true,
                     wheelSize: 584,
+                    wheelBase: 1170,
+                    stack: 601,
                 },
             ]
         }
