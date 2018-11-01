@@ -2,7 +2,7 @@
     <g :visibility="visibility" :id="model" fill="none" :stroke="color" stroke-width="4">
         <wheel v-bind:size="wheelSize" v-bind:x="rearAxle.x" v-bind:y="rearAxle.y"></wheel>
         <wheel v-bind:size="wheelSize" v-bind:x="frontAxle.x" v-bind:y="frontAxle.y"></wheel>
-        <frame v-bind:rearAxle="rearAxle" v-bind:bbDrop="bbDropCalc" v-bind:chainStay="chainStay" v-bind:stack="stack" v-bind:reach="reach"></frame>
+        <frame v-bind:frontAxle="frontAxle" v-bind:rearAxle="rearAxle" v-bind:bbDrop="bbDropCalc" v-bind:chainStay="chainStay" v-bind:stack="stack" v-bind:reach="reach"></frame>
     </g>
 </template>
 

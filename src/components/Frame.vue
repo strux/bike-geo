@@ -2,12 +2,14 @@
     <g>
         <line :x1="rearAxle.x" :y1="rearAxle.y" :x2="bb.x" :y2="bb.y"></line>
         <line :x1="headTubeTop.x" :y1="headTubeTop.y" :x2="bb.x" :y2="bb.y"></line>
+        <line :x1="headTubeTop.x" :y1="headTubeTop.y" :x2="frontAxle.x" :y2="frontAxle.y"></line>
+        <line :x1="headTubeTop.x" :y1="headTubeTop.y" :x2="rearAxle.x" :y2="rearAxle.y"></line>
     </g>
 </template>
 
 <script>
   export default {
-    props: ['rearAxle', 'bbDrop', 'chainStay', 'stack', 'reach'],
+    props: ['frontAxle', 'rearAxle', 'bbDrop', 'chainStay', 'stack', 'reach'],
     data: () => ({
     }),
     computed: {
