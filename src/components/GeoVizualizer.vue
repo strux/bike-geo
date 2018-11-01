@@ -1,7 +1,7 @@
 <template>
     <v-container v-bind:style="{ height: containerHeight }">
-        <svg height="100%" width="100%" :viewBox="viewBoxDef">
-            <bike v-for="bike in bikes" :key="bike.model" v-bind="bike" v-bind:viewBoxWidth="viewBoxWidth" v-bind:viewBoxHeight="viewBoxHeight"  ></bike>
+        <svg :viewBox="viewBoxDef">
+            <bike v-for="bike in bikes" :key="bike.model" v-bind="bike" v-bind:viewBoxWidth="viewBoxWidth" v-bind:viewBoxHeight="viewBoxHeight"></bike>
         </svg>
   </v-container>
 </template>

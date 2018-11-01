@@ -39,22 +39,28 @@ export default {
         return {
             bikes: [
                 {
+                    enabled: true,
                     color: 'red',
                     make: 'Evil',
                     model: 'The Following',
-                    enabled: true,
                     wheelSize: 622,
                     wheelBase: 1139,
                     stack: 608,
+                    reach: 435,
+                    chainStay: 430,
+                    bbHeight: 338,
                 },
                 {
+                    enabled: true,
                     color: 'blue',
                     make: 'Evil',
                     model: 'The Calling',
-                    enabled: true,
                     wheelSize: 584,
                     wheelBase: 1170,
                     stack: 601,
+                    reach: 440,
+                    chainStay: 430,
+                    bbHeight: 338,
                 },
             ]
         }
